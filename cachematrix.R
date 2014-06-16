@@ -29,10 +29,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
     if (nrow(x$get()) != ncol(x$get())) {
-        message("Not possible to invert a non-square matrix")
+        message("No possible to invert a rectangular matrix")
         return()
     }
-    # Return a matrix that is the inverse of x
+    ## Return a matrix that is the inverse of x
     i <- x$getinv()
     if(!is.null(i)) {
         message("getting cached data")
